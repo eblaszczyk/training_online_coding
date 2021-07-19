@@ -1,4 +1,4 @@
-package com.eblaszczyk.leetcode;
+package com.eblaszczyk.leetcode._1_50.easy;
 
 public class L7ReverseInteger {
 

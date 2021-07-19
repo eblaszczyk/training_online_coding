@@ -1,4 +1,4 @@
-package com.eblaszczyk.leetcode;
+package com.eblaszczyk.leetcode._1_50.medium;
 
 public class L6ZigZagConversion {
     public String convert(String s, int numRows) {
@@ -16,13 +16,16 @@ public class L6ZigZagConversion {
            char c = s.charAt(i);
            helpers[row] = helpers[row] + c;
 
-           if(row == numRows-1){
-               delta =-1;
-           }
-           if(row==0){
-               delta = 1;
-           }
-           row= row + delta;
+            if(numRows>1){
+
+                if(row == numRows-1){
+                    delta =-1;
+                }
+                if(row==0){
+                    delta = 1;
+                }
+                row= row + delta;
+            }
 
         }
 
@@ -34,10 +37,11 @@ public class L6ZigZagConversion {
     }
 
     public static void main(String[] args) {
-        System.out.println(new L6ZigZagConversion().convert("PAYPALISHIRING", 4));
+        System.out.println(new L6ZigZagConversion().convert("AB", 1));
+        //System.out.println(new L6ZigZagConversion().convert("PAYPALISHIRING", 4));
         //PINALSIGYAHRPI
         //PINALSIGYAHRPI
-        System.out.println(new L6ZigZagConversion().convert("PAYPALISHIRING", 3));
+       // System.out.println(new L6ZigZagConversion().convert("PAYPALISHIRING", 3));
         //PAHNAPLSIIGYIR
         //PAHNAPLSIIGYIR
 
